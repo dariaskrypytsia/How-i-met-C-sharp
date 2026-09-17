@@ -16,4 +16,14 @@ public class Student
         }
     
 }
+     public void Leave(Course course)
+    {
+        if (Courses.Contains(course))
+        {
+            Courses.Remove(course);
+        course.Remove(this);
+        }
+    
+    }
+
 }

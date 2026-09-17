@@ -1,4 +1,4 @@
-﻿Course familyBusinessManagment = new Course("Family business managmentk", 2);
+﻿Course familyBusinessManagment = new Course("Family business managment", 2);
 
 Student michael = new Student("Michael Carleone");
 Student sonny = new Student("Sonny Carleone");
@@ -10,5 +10,5 @@ familyBusinessManagment.Enroll(fredo); // no place left for Fredo
 
 familyBusinessManagment.Enroll(michael); //already in
 
-Console.WriteLine($"Anna's courses count: {michael.Courses.Count}"); 
-Console.WriteLine($"Math students count: {familyBusinessManagment.Students.Count}"); 
+Console.WriteLine($":Michael's courses count: {michael.Courses.Count}"); 
+Console.WriteLine($"Family business students count: {familyBusinessManagment.Students.Count}"); 

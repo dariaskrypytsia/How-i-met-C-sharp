@@ -27,4 +27,16 @@ public class Course
     Students.Add(student);
     student.Join(this); 
 }
+public void Remove(Student student)
+{
+    if (!Students.Contains(student))
+        {
+            Console.WriteLine($"{student.Name} is not enrolled in {Name}");
+        return;
+        }
+    
+
+    Students.Remove(student);
+    student.Leave(this);
+}
 }
