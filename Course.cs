@@ -25,7 +25,11 @@ public class Course
         }
 
     Students.Add(student);
-    student.Join(this); 
+     if (!student.Courses.Contains(this))
+        {
+            student.Join(this);
+        }
+   
     }
 
 public void Remove(Student student)

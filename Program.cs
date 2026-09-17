@@ -10,7 +10,7 @@ familyBusinessManagment.Enroll(fredo); // no place left for Fredo
 
 familyBusinessManagment.Enroll(michael); //already in
 
-Console.WriteLine($":Michael's courses count: {michael.Courses.Count}"); 
+Console.WriteLine($"Michael's courses count: {michael.Courses.Count}"); 
 Console.WriteLine($"Family business managment students count: {familyBusinessManagment.Students.Count}"); 
 
 familyBusinessManagment.Remove(sonny);

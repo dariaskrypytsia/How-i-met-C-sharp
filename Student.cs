@@ -12,20 +12,32 @@ public class Student
         if (!Courses.Contains(course))
         {
              Courses.Add(course);
-        course.Enroll(this);
+        if (!course.Students.Contains(this))
+            {
+                course.Enroll(this);
+            }
+        
+            
+        
         }
     
     }
 
-     public void Leave(Course course)
+    public void Leave(Course course)
     {
         if (Courses.Contains(course))
         {
             Courses.Remove(course);
-        course.Remove(this);
+
+        if (course.Students.Contains(this))
+            {
+                course.Remove(this);
+            }
+       
         }
-    
+      
     }
+
 public void Schedule()
     {
         Console.WriteLine($"{Name}'s courses:");
