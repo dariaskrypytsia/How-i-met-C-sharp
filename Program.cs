@@ -28,3 +28,11 @@ fredo.Schedule();
 Console.WriteLine(familyBusinessManagment);
 Console.WriteLine(fredo); 
 
+Console.WriteLine("\n--- Testing Join from the student's side ---");
+Course weddingPlanning = new Course("Wedding Planning", 1);
+Student vito = new Student("Vito Corleone");
+
+vito.Join(weddingPlanning); // enrolling FROM the student's side this time
+
+weddingPlanning.RollCall(); 
+vito.Schedule();  
