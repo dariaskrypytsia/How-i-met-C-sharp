@@ -7,4 +7,12 @@ public class Student
     {
         Name = name;
     }
+    public void Join(Course course)
+{
+    if (!Courses.Contains(course))
+    {
+        Courses.Add(course);
+        course.Enroll(this);
+    }
+}
 }

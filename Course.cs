@@ -9,4 +9,5 @@ public class Course
         Name = name;
         MaxSeats = maxSeats;
     }
+   
 }
