@@ -10,8 +10,8 @@ public class Course
         MaxSeats = maxSeats;
     }
    public void Enroll(Student student)
-{
-    // dont add the same student twice
+    {
+        // dont add the same student twice
     if (Students.Contains(student))
         {
             Console.WriteLine($"{student.Name} is already in {Name}");
@@ -26,10 +26,11 @@ public class Course
 
     Students.Add(student);
     student.Join(this); 
-}
+    }
+
 public void Remove(Student student)
-{
-    if (!Students.Contains(student))
+    {
+        if (!Students.Contains(student))
         {
             Console.WriteLine($"{student.Name} is not enrolled in {Name}");
         return;
@@ -38,5 +39,22 @@ public void Remove(Student student)
 
     Students.Remove(student);
     student.Leave(this);
-}
+    }
+
+public void RollCall()
+    {
+        Console.WriteLine($"Students in {Name}:");
+    foreach (Student student in Students)
+        {
+            Console.WriteLine($"- {student.Name}");
+        }
+    
+    }
+
+
+public override string ToString()
+    {
+        return $"{Name} ({Students.Count}/{MaxSeats} platser)";
+    }
+
 }
