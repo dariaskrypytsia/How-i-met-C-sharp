@@ -9,5 +9,22 @@ public class Course
         Name = name;
         MaxSeats = maxSeats;
     }
-   
+   public void Enroll(Student student)
+{
+    // dont add the same student twice
+    if (Students.Contains(student))
+        {
+            Console.WriteLine($"{student.Name} is already in {Name}");
+        return; 
+        }
+
+    if (Students.Count >= MaxSeats)
+        {
+             Console.WriteLine($"{Name} is full");
+        return;
+        }
+
+    Students.Add(student);
+    student.Join(this); 
+}
 }
