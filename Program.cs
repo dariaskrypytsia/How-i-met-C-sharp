@@ -21,3 +21,10 @@ familyBusinessManagment.Remove(sonny);
 // now there's room, so Fredo can join
 familyBusinessManagment.Enroll(fredo);
 Console.WriteLine($"Family business managment students count after Fredo joined: {familyBusinessManagment.Students.Count}");
+
+
+familyBusinessManagment.RollCall();
+fredo.Schedule();
+Console.WriteLine(familyBusinessManagment);
+Console.WriteLine(fredo); 
+
